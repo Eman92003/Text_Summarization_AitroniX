@@ -11,7 +11,7 @@ st.title("Text Summarizer (Arabic / English)")
 # -----------------------------
 # Token (Secrets or Env Var)
 # -----------------------------
-HF_TOKEN = "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"
+HF_TOKEN = None
 try:
     HF_TOKEN = st.secrets.get(HF_TOKEN)
 except Exception:
@@ -97,3 +97,4 @@ if do_summarize:
     st.subheader("Summary")
     st.write(summary)
     st.caption(f"Model: {model_id}")
+
